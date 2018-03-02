@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-search-input',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchInputComponent implements OnInit {
 
-  constructor() { }
+  value = '';
+
+  constructor(public userService: UserService) { }
 
   ngOnInit() {
   }
 
+  handleClick() {
+    this.userService.getUser(this.value).subscribe( data => {
+      this.userService.data = data;
+    });
+  }
 }

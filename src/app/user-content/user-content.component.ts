@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-user-content',
@@ -6,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-content.component.css']
 })
 export class UserContentComponent implements OnInit {
-
-  constructor() { }
+  constructor(public userService: UserService) { }
 
   ngOnInit() {
   }

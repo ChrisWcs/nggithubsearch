@@ -18,6 +18,8 @@ export class SearchInputComponent implements OnInit {
   handleClick() {
     this.userService.getUser(this.value).subscribe( data => {
       this.userService.data = data;
+      console.log(this.userService.data);
     });
+    this.value = '';
   }
 }

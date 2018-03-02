@@ -4,3 +4,17 @@
     align-items: center;
     justify-content: center;
 }
+
+.TopBanner {
+    background: black;
+    width: auto;
+    height: 50px;
+    margin-bottom: 40px;
+    padding: 50px;
+}
+
+.TopBannerText {
+    color: white;
+    text-align: center;
+    font-family: Arial;
+}
